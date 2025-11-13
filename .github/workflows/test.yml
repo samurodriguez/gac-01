@@ -6,5 +6,8 @@ jobs:
     steps:
       - name: log date
         run: date
-      # - name: send slack message
-      #   uses: xxxxx
+  log-node-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: log node version
+        run: node --version
