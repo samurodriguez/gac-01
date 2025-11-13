@@ -1,0 +1,14 @@
+name: cowsay
+on: push
+jobs:
+  log-cow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: install cowsay
+        run: npm i -g cowsay
+      - name: log cow
+        run: cowsay ¡Primer día de GAC completado!
