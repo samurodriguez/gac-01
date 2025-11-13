@@ -16,8 +16,12 @@ jobs:
     steps:
       - name: log node version
         run: node --version
-      - name: log dir
-        run: ls -a
+      - name: setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 24
+      - name: log node version
+        run: node --version
   log-readme:
     runs-on: ubuntu-latest
     steps:
