@@ -4,11 +4,17 @@ jobs:
   log-date:
     runs-on: ubuntu-latest
     steps:
-      - name: log date
-        run: date
+      - name: create date txt
+        run: date >> date.txt
+      - name: log dir
+        run: ls -a
+      - name: read date txt
+        run: cat date.txt
   log-node-version:
     needs: log-date
     runs-on: ubuntu-latest
     steps:
       - name: log node version
         run: node --version
+      - name: log dir
+        run: ls -a
