@@ -1,0 +1,8 @@
+name: test
+on: push
+jobs:
+  log-date:
+    runs-on: ubuntu
+    steps:
+      - name: log date
+        run: date
